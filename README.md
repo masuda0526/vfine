@@ -10,8 +10,8 @@
 
 A simple, lightweight validation library that works seamlessly on both frontend and server-side.
 
-[![npm version](https://img.shields.io/npm/v/vfine.svg)](https://www.npmjs.com/package/vfine)
-[![license](https://img.shields.io/npm/l/vfine.svg)](https://github.com/your-org/vfine/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@masuda0526/vfine.svg)](https://www.npmjs.com/package/@masuda0526/vfine)
+[![license](https://img.shields.io/npm/l/@masuda0526/vfine.svg)](https://github.com/masuda0526/vfine/blob/main/LICENSE)
 
 ## Features
 
@@ -27,7 +27,7 @@ A simple, lightweight validation library that works seamlessly on both frontend 
 ## Installation
 
 ```bash
-npm install vfine
+npm install @masuda0526/vfine
 ```
 
 ## Quick Start
@@ -35,7 +35,7 @@ npm install vfine
 ### Using `ValidationContext` (recommended for forms)
 
 ```typescript
-import { ValidationContext } from 'vfine';
+import { ValidationContext } from '@masuda0526/vfine';
 
 const ctx = new ValidationContext();
 
@@ -62,7 +62,7 @@ if (ctx.hasError()) {
 ### Using a validator directly (single field or unit tests)
 
 ```typescript
-import { StringValidator } from 'vfine';
+import { StringValidator } from '@masuda0526/vfine';
 
 const v = new StringValidator('email', 'Email', inputValue);
 const result = v.required().email().validate();
@@ -179,7 +179,7 @@ ctx.addString('bio', 'Bio', value)
 ### Global default (applied project-wide)
 
 ```typescript
-import { MinLengthRule } from 'vfine';
+import { MinLengthRule } from '@masuda0526/vfine';
 MinLengthRule.setDefaultMessage('{label} must be at least {min} characters.');
 ```
 
@@ -320,7 +320,7 @@ const handleSubmit = () => {
 ## Server-side Example (Node.js)
 
 ```typescript
-import { ValidationContext } from 'vfine';
+import { ValidationContext } from '@masuda0526/vfine';
 
 function validateUser(body: unknown) {
   const ctx = new ValidationContext();
@@ -365,7 +365,7 @@ MIT
 ## インストール
 
 ```bash
-npm install vfine
+npm install @masuda0526/vfine
 ```
 
 ## クイックスタート
@@ -373,7 +373,7 @@ npm install vfine
 ### `ValidationContext` を使う（フォーム全体の検証に推奨）
 
 ```typescript
-import { ValidationContext } from 'vfine';
+import { ValidationContext } from '@masuda0526/vfine';
 
 const ctx = new ValidationContext();
 
@@ -400,7 +400,7 @@ if (ctx.hasError()) {
 ### バリデーターを直接使う（単一フィールド・単体テスト向け）
 
 ```typescript
-import { StringValidator } from 'vfine';
+import { StringValidator } from '@masuda0526/vfine';
 
 const v = new StringValidator('email', 'メールアドレス', inputValue);
 const result = v.required().email().validate();
@@ -517,7 +517,7 @@ ctx.addString('bio', '自己紹介', value)
 ### ③ グローバルデフォルトの変更（プロジェクト全体で統一）
 
 ```typescript
-import { MinLengthRule } from 'vfine';
+import { MinLengthRule } from '@masuda0526/vfine';
 // アプリ初期化時に1度だけ設定
 MinLengthRule.setDefaultMessage('{label}は{min}文字以上で入力してください。');
 ```
@@ -659,7 +659,7 @@ const handleSubmit = () => {
 ## 使用例（Node.js サーバーサイド）
 
 ```typescript
-import { ValidationContext } from 'vfine';
+import { ValidationContext } from '@masuda0526/vfine';
 
 function validateUser(body: unknown) {
   const ctx = new ValidationContext();

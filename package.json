@@ -1,5 +1,5 @@
 {
-  "name": "vfine",
+  "name": "@masuda0526/vfine",
   "version": "0.1.0",
   "description": "A versatile validation library for frontend and server-side use",
   "license": "MIT",
